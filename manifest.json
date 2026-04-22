@@ -1,23 +1,23 @@
 {
   "id": "./",
-  "name": "PWA Template Responsif",
-  "short_name": "PWA Demo",
-  "description": "Aplikasi PWA responsif untuk demonstrasi template dasar Progressive Web App dengan dukungan offline dan installable.",
+  "name": "Homelytic — Perawatan Rumah Cerdas",
+  "short_name": "Homelytic",
+  "description": "Aplikasi PWA perawatan rumah cerdas. Kelola tugas, jadwal, anggaran, dan kondisi ruangan secara terpadu — bisa digunakan offline.",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#4F46E5",
-  "theme_color": "#4F46E5",
+  "background_color": "#1a3a2a",
+  "theme_color": "#1a3a2a",
   "orientation": "portrait",
   "lang": "id",
   "icons": [
     {
-      "src": "icons/icon-192x192-A.png",
+      "src": "icons/icon-192x192-C.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "icons/icon-512x512-B.png",
+      "src": "icons/icon-512x512-D.png",
       "sizes": "512x512",
       "type": "image/png"
     }
@@ -26,12 +26,16 @@
     {
       "src": "icons/screenshot1.png",
       "sizes": "1080x1920",
-      "type": "image/png"
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Beranda Homelytic"
     },
     {
       "src": "icons/screenshot2.png",
       "sizes": "1080x1920",
-      "type": "image/png"
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Daftar Tugas Perawatan"
     }
   ],
   "shortcuts": [
@@ -39,6 +43,31 @@
       "name": "Buka Beranda",
       "short_name": "Home",
       "url": "./index.html",
+      "description": "Kembali ke halaman utama Homelytic",
+      "icons": [
+        {
+          "src": "icons/icon-192x192-A.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Tambah Tugas",
+      "short_name": "Tugas",
+      "url": "./index.html?action=add-task",
+      "description": "Langsung tambah tugas perawatan baru",
+      "icons": [
+        {
+          "src": "icons/icon-192x192-A.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Lihat Anggaran",
+      "short_name": "Anggaran",
+      "url": "./index.html?section=budget",
+      "description": "Cek anggaran perawatan bulan ini",
       "icons": [
         {
           "src": "icons/icon-192x192-A.png",
@@ -49,6 +78,8 @@
   ],
   "categories": [
     "productivity",
-    "utilities"
-  ]
+    "utilities",
+    "lifestyle"
+  ],
+  "prefer_related_applications": false
 }

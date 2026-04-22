@@ -39,14 +39,14 @@
   "screenshots": [
     {
       "src": "/Homelytic/icons/screenshot1.png",
-      "sizes": "1080x1920",
+      "sizes": "1442x3090",
       "type": "image/png",
       "form_factor": "narrow",
       "label": "Beranda Homelytic"
     },
     {
       "src": "/Homelytic/icons/screenshot2.png",
-      "sizes": "1080x1920",
+      "sizes": "1442x3090",
       "type": "image/png",
       "form_factor": "narrow",
       "label": "Daftar Tugas Perawatan"

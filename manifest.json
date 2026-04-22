@@ -1,10 +1,10 @@
 {
-  "id": "./",
+  "id": "/Homelytic/",
   "name": "Homelytic — Perawatan Rumah Cerdas",
   "short_name": "Homelytic",
   "description": "Aplikasi PWA perawatan rumah cerdas. Kelola tugas, jadwal, anggaran, dan kondisi ruangan secara terpadu — bisa digunakan offline.",
-  "start_url": "./index.html",
-  "scope": "./",
+  "start_url": "/Homelytic/index.html",
+  "scope": "/Homelytic/",
   "display": "standalone",
   "background_color": "#1a3a2a",
   "theme_color": "#1a3a2a",
@@ -12,25 +12,25 @@
   "lang": "id",
   "icons": [
     {
-      "src": "icons/icon-192x192-A.png",
+      "src": "/Homelytic/icons/icon-192x192-A.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "icons/icon-192x192-A.png",
+      "src": "/Homelytic/icons/icon-192x192-A.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "maskable"
     },
     {
-      "src": "icons/icon-512x512-B.png",
+      "src": "/Homelytic/icons/icon-512x512-B.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "icons/icon-512x512-B.png",
+      "src": "/Homelytic/icons/icon-512x512-B.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
@@ -38,14 +38,14 @@
   ],
   "screenshots": [
     {
-      "src": "icons/screenshot1.png",
+      "src": "/Homelytic/icons/screenshot1.png",
       "sizes": "1080x1920",
       "type": "image/png",
       "form_factor": "narrow",
       "label": "Beranda Homelytic"
     },
     {
-      "src": "icons/screenshot2.png",
+      "src": "/Homelytic/icons/screenshot2.png",
       "sizes": "1080x1920",
       "type": "image/png",
       "form_factor": "narrow",
@@ -56,11 +56,11 @@
     {
       "name": "Buka Beranda",
       "short_name": "Home",
-      "url": "./index.html",
+      "url": "/Homelytic/index.html",
       "description": "Kembali ke halaman utama Homelytic",
       "icons": [
         {
-          "src": "icons/icon-192x192-A.png",
+          "src": "/Homelytic/icons/icon-192x192-A.png",
           "sizes": "192x192",
           "type": "image/png"
         }
@@ -69,11 +69,11 @@
     {
       "name": "Tambah Tugas",
       "short_name": "Tugas",
-      "url": "./index.html?action=add-task",
+      "url": "/Homelytic/index.html?action=add-task",
       "description": "Langsung tambah tugas perawatan baru",
       "icons": [
         {
-          "src": "icons/icon-192x192-A.png",
+          "src": "/Homelytic/icons/icon-192x192-A.png",
           "sizes": "192x192",
           "type": "image/png"
         }
@@ -82,11 +82,11 @@
     {
       "name": "Lihat Anggaran",
       "short_name": "Anggaran",
-      "url": "./index.html?section=budget",
+      "url": "/Homelytic/index.html?section=budget",
       "description": "Cek anggaran perawatan bulan ini",
       "icons": [
         {
-          "src": "icons/icon-192x192-A.png",
+          "src": "/Homelytic/icons/icon-192x192-A.png",
           "sizes": "192x192",
           "type": "image/png"
         }

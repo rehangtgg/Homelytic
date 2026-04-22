@@ -12,25 +12,25 @@
   "lang": "id",
   "icons": [
     {
-      "src": "/Homelytic/icons/icon-192x192-A.png",
+      "src": "/Homelytic/icons/icon-192x192-C.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/Homelytic/icons/icon-192x192-A.png",
+      "src": "/Homelytic/icons/icon-192x192-C.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "maskable"
     },
     {
-      "src": "/Homelytic/icons/icon-512x512-B.png",
+      "src": "/Homelytic/icons/icon-512x512-D.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/Homelytic/icons/icon-512x512-B.png",
+      "src": "/Homelytic/icons/icon-512x512-D.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"

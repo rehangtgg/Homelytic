@@ -60,7 +60,7 @@
       "description": "Kembali ke halaman utama Homelytic",
       "icons": [
         {
-          "src": "/Homelytic/icons/icon-192x192-A.png",
+          "src": "/Homelytic/icons/icon-192x192-C.png",
           "sizes": "192x192",
           "type": "image/png"
         }
@@ -73,7 +73,7 @@
       "description": "Langsung tambah tugas perawatan baru",
       "icons": [
         {
-          "src": "/Homelytic/icons/icon-192x192-A.png",
+          "src": "/Homelytic/icons/icon-192x192-C.png",
           "sizes": "192x192",
           "type": "image/png"
         }
@@ -86,7 +86,7 @@
       "description": "Cek anggaran perawatan bulan ini",
       "icons": [
         {
-          "src": "/Homelytic/icons/icon-192x192-A.png",
+          "src": "/Homelytic/icons/icon-192x192-C.png",
           "sizes": "192x192",
           "type": "image/png"
         }

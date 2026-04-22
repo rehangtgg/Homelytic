@@ -4,7 +4,7 @@
 // =============================================
 
 const APP_NAME    = 'homelytic';
-const CACHE_VER   = 'v1.0.0';
+const CACHE_VER   = 'v1.0.1';
 const CACHE_NAME  = `${APP_NAME}-static-${CACHE_VER}`;
 const DATA_CACHE  = `${APP_NAME}-data-${CACHE_VER}`;
 
@@ -13,9 +13,8 @@ const STATIC_ASSETS = [
   './index.html',
   './manifest.json',
   './assets/style.css',
-  './icons/icon-192x192-A.png',
-  './icons/icon-512x512-B.png',
-  // Fallback offline page
+  './icons/icon-192x192-C.png',
+  './icons/icon-512x512-D.png',
   './offline.html',
 ];
 
@@ -28,7 +27,6 @@ self.addEventListener('install', event => {
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then(cache => {
-        // addAll dengan fallback per-file agar tidak gagal total
         return Promise.allSettled(
           STATIC_ASSETS.map(url =>
             cache.add(url).catch(err =>
@@ -74,10 +72,8 @@ self.addEventListener('fetch', event => {
   const { request } = event;
   const url = new URL(request.url);
 
-  // Abaikan request non-HTTP (chrome-extension, dll)
   if (!request.url.startsWith('http')) return;
 
-  // Abaikan request ke Google Fonts (biarkan browser handle)
   if (url.hostname.includes('fonts.googleapis.com') ||
       url.hostname.includes('fonts.gstatic.com')) {
     event.respondWith(
@@ -93,7 +89,6 @@ self.addEventListener('fetch', event => {
     return;
   }
 
-  // Navigasi halaman → cache-first, fallback offline
   if (request.mode === 'navigate') {
     event.respondWith(
       caches.match(request)
@@ -116,7 +111,6 @@ self.addEventListener('fetch', event => {
     return;
   }
 
-  // Aset statis (CSS, JS, gambar) → cache-first
   if (
     request.destination === 'style' ||
     request.destination === 'script' ||
@@ -139,7 +133,6 @@ self.addEventListener('fetch', event => {
     return;
   }
 
-  // Default: network-first
   event.respondWith(
     fetch(request)
       .then(response => {
@@ -154,7 +147,7 @@ self.addEventListener('fetch', event => {
 });
 
 // =============================================
-//  SYNC — background sync (opsional)
+//  SYNC — background sync
 // =============================================
 self.addEventListener('sync', event => {
   if (event.tag === 'sync-tasks') {
@@ -164,7 +157,6 @@ self.addEventListener('sync', event => {
 });
 
 async function syncTasks() {
-  // Placeholder — bisa diisi logika sinkronisasi ke server
   console.log('[Homelytic SW] Sinkronisasi tugas selesai');
 }
 
@@ -183,8 +175,8 @@ self.addEventListener('push', event => {
   event.waitUntil(
     self.registration.showNotification(data.title, {
       body:    data.body,
-      icon:    './icons/icon-192x192-A.png',
-      badge:   './icons/icon-192x192-A.png',
+      icon:    './icons/icon-192x192-C.png',
+      badge:   './icons/icon-192x192-C.png',
       vibrate: [200, 100, 200],
       data:    { url: data.url || './index.html' },
       actions: [
@@ -210,13 +202,11 @@ self.addEventListener('notificationclick', event => {
   event.waitUntil(
     clients.matchAll({ type: 'window', includeUncontrolled: true })
       .then(windowClients => {
-        // Fokus ke tab yang sudah terbuka jika ada
         for (const client of windowClients) {
           if (client.url.includes('index.html') && 'focus' in client) {
             return client.focus();
           }
         }
-        // Buka tab baru jika belum ada
         if (clients.openWindow) return clients.openWindow(targetUrl);
       })
   );
